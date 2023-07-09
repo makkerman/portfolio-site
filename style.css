@@ -1,0 +1,234 @@
+* {
+    font-family: Montserrat;
+    box-sizing: border-box;
+    color: black;
+}
+
+body {
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+h1 {
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.logo a:hover {
+    color:#4444dd;
+    transition: .4s;
+}
+
+@media screen and (min-width: 800px) {
+    .banner-container h2 {
+    margin: 0px 300px;
+}
+}
+
+.banner-container {
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.banner-container h2 {
+    padding: 0px 30px;
+}
+
+.banner-container h2:hover {
+    font-style: italic;
+    transition: 1s;
+}
+h2 {
+    font-weight: 400;
+    font-size: 32px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-right: 10px;
+}
+
+
+
+nav li {
+    text-transform: uppercase;
+    list-style-type: none;
+    display: inline-block;
+    width: auto;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    position: relative;
+    padding: 5px;
+}
+
+
+nav a.nav-li:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: black;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  nav a.nav-li:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+  button {
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    padding: 15px;
+}
+
+.dark-mode-js {
+    background-color: black;
+   color: white
+}
+
+button:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 3px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: white;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+ button:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+  /*Gallery*/
+.gallery-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 10px 50px;
+}
+
+.gallery-link {
+    width: 420px;
+    height: 420px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 40px 20px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+a.gallery-link:hover {
+    opacity: .5;
+    transition: .5s;
+}
+
+
+.gallery-link span {
+    margin-bottom: 25px;
+    padding: 15px;
+    font-size: 1.5rem;
+    background-color: white;
+}
+
+.io-floral {
+    background-image: url(/images/io-floral.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(-10px 10px 0px #4444dd);
+}
+
+.on-air {
+    background-image: url(/images/on-air.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(-10px 10px 0px #ff6a00);
+}
+
+.paint-box {
+    background-image: url(/images/paint-box.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(-10px 10px 0px #91e413);
+}
+
+.hemp-trove {
+    background-image: url(/images/hemp-trove.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(-10px 10px 0px magenta);
+}
+
+@media screen and (max-width: 865px) {
+    .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+@keyframes fadeinall {
+    0% {
+      opacity: 1; }
+    97% {
+      opacity: 0; }
+    98% {
+      opacity: 0;
+      -webkit-transform: translateY(0);
+      transform: translateY(0); }
+    100% {
+      opacity: 0;
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+      z-index: -1; } }
+    #fadein {
+      opacity: 1;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+      background-color: #FFFFFF;
+      z-index: 999;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      -webkit-animation: fadeinall 1s normal both;
+      animation: fadeinall 1s normal both;
+      -webkit-animation-delay: 0.3s;
+      animation-delay: 0.3s; }
